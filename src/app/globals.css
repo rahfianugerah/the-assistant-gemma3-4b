@@ -25,5 +25,91 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.markdown-body {
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body :not(pre)>code,
+.inline-code {
+  background: #171717;
+  color: #e5e7eb;
+  padding: .15rem .35rem;
+  border-radius: .35rem;
+  font-family: "Source Code Pro", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: .92em;
+}
+
+.markdown-body pre {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.markdown-body pre code.hljs,
+.markdown-body .hljs {
+  background: transparent !important;
+}
+
+.markdown-body pre code {
+  font-family: "Source Code Pro", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: .92em;
+}
+
+.markdown-body a {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #2a2a2a;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid #2a2a2a;
+  padding: .4rem .5rem;
+}
+
+.markdown-body :not(pre) > code { 
+  background: #171717; 
+  padding: .15rem .35rem; 
+  border-radius: .35rem; 
+}
+
+.markdown-body pre,
+.markdown-body pre code.hljs,
+.markdown-body .hljs {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
