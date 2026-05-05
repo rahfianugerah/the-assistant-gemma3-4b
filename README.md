@@ -6,6 +6,7 @@
 ![Build](https://img.shields.io/badge/Build-Passing-green)
 
 <div align="center">
+  <img height="150" width="150" alt="the-assistant-logo" src="https://github.com/user-attachments/assets/d83a722b-8136-44c5-86cf-b84e29231e3b" />
   <h3>
     The Assistant
   </h3>
@@ -33,8 +34,6 @@ Front-End Installation:
 ```bash
 npm install
 ```
-
----
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
