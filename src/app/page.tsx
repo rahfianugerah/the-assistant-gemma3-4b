@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiSend } from "react-icons/fi";
 import ReactMarkdown from "react-markdown";
@@ -233,9 +234,18 @@ export default function ChatPage() {
     <div className="min-h-screen bg-neutral-950 text-neutral-50 flex flex-col">
       <header className="border-b border-neutral-800 p-4 sticky top-0 bg-neutral-950/80 backdrop-blur">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
-          <div>
-            <h1 className="text-xl font-semibold">The Assistant</h1>
-            <p className="text-sm text-neutral-400">I&apos;m Ready to Help You</p>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/the-assistant-logo.png"
+              alt="The Assistant Logo"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
+            <div>
+              <h1 className="text-xl font-semibold">The Assistant</h1>
+              <p className="text-sm text-neutral-400">I&apos;m Ready to Help You</p>
+            </div>
           </div>
         </div>
       </header>
@@ -282,7 +292,18 @@ export default function ChatPage() {
                   m.role === "user" ? "bg-neutral-900 border-neutral-800" : "bg-neutral-950 border-neutral-800"
                 )}
               >
-                <div className="text-xs uppercase tracking-wide text-neutral-500 mb-1">{m.role}</div>
+                <div className="flex items-center gap-1.5 text-xs capitalize tracking-wide text-neutral-500 mb-1">
+                  {m.role === "assistant" && (
+                    <Image
+                      src="/the-assistant-logo.png"
+                      alt="Assistant"
+                      width={16}
+                      height={16}
+                      className="rounded-full opacity-80"
+                    />
+                  )}
+                  {m.role}
+                </div>
                 <div className={cn("leading-relaxed text-sm", m.role === "user" ? "whitespace-pre-wrap" : "")}>
                   {m.content === "Thinking…" ? (
                     <TypingDots />
